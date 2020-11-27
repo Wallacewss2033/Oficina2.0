@@ -16,7 +16,7 @@ class BudgetsController extends Controller
     public function index(Request $request)
     {
         $budgets = Budgets::orderByDesc('date')->get();       
-        return view('cadastros.index', compact('budgets'));
+        return view('budgets.index', compact('budgets'));
     }
 
     public function search(SearchFormRequest $request)
@@ -38,14 +38,14 @@ class BudgetsController extends Controller
         } else {
             $budgets = $result->whereBetween('date', [$date_begin, $date_end]);;
 
-            return view('cadastros.index', compact('budgets'));
+            return view('budgets.index', compact('budgets'));
         }
     }
 
 
     public function create()
     {
-        return view('cadastros.create');
+        return view('budgets.create');
     }
 
 
@@ -73,7 +73,7 @@ class BudgetsController extends Controller
     {
         $this->$id = $id;
         $budgets = Budgets::where("id", $this->$id)->first();
-        return view('cadastros.edit', compact('budgets'));
+        return view('budgets.edit', compact('budgets'));
     }
 
     public function update(BudgetsFormRequest $request, $id)

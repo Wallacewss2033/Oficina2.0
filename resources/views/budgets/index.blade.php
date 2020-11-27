@@ -22,7 +22,7 @@
 
 
     <div class="container">
-        @include('cadastros.partial.formSearch')
+        @include('budgets.partial.formSearch')
     </div>
     <div class="form-group col-md-12">
         <a type="button" href="{{route('budgets.create')}}" class="btn btn-success text-white" role="button" id="inputAddress">
