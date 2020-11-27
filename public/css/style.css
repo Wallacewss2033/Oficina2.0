@@ -1,0 +1,146 @@
+.nav {
+    height: 60px;
+    width: 100%;
+    margin: 0px;
+    min-width: 100%;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+.content {
+    background-color: rgb(238, 238, 255);
+    height: 100%;
+}
+
+.panel {
+    height: 100vh;
+}
+
+.wrapper {
+    max-width: 1200px;
+    min-width: 570px;
+    margin: 0 auto;
+}
+
+.content-name {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px rgb(221, 218, 218);
+    width: 100%;
+    background-color: white;
+    padding: 50px;
+}
+
+.view-wrapper {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    min-height: 83%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "teste";
+}
+
+.content-name {
+    background-color: white;
+    margin: 20px;
+    padding: 5px;
+}
+.container{
+    background-color: white;
+    margin: 20px 0px;
+    padding: 5px;
+    height: 100%;
+    border-bottom: solid 1px rgb(221, 218, 218);
+    min-height: 60px;
+
+}
+.transparente {
+    background-color: transparent;
+}
+
+.margin-top-trinta {
+ margin-top: 30px;
+}
+
+.margin-top-dez {
+    margin-top: 10px;
+   }
+
+.content-form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-form form textarea {
+    height: 130px;
+    max-height: 700px;
+    min-height: 100px;
+}
+
+.table {
+    width: 100%;
+    min-width: 700px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+@media(max-width: 700px) {
+    html, body {
+        zoom: 73%;
+    }
+    .panel {
+        width: 100vw;
+        width: 568px;
+    }
+    .wrapper {
+        max-width: 400px;
+        width: 90%;
+    }
+    .view-wrapper {
+        width: 100%;
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+    }
+    .table {
+        min-width: 350px;
+        width: 100px;
+    }
+    .content-form form {
+        font-size: 25px;
+    }
+    .content-form form input {
+        font-size: 30px;
+    }
+    .content-form form textarea {
+        font-size: 30px;
+        height: 250px;
+    }
+    .content-form form button {
+        font-size: 25px;
+    }
+    .container{
+        
+        margin: 20px;
+
+    }
+
+    .container select{
+        font-size: 30px;
+    }
+}
