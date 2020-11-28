@@ -1,4 +1,13 @@
+
+<h1 align="center">Oficina 2.0</h1>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+
+## Descrição do Projeto
+<p align="center">
+um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedidos de orçamento da oficina
+</p>
+
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
