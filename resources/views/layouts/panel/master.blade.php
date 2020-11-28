@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Startmin - Bootstrap Admin Theme</title>
+    <title>Oficina 2.0</title>
 
     <!-- MyStyle Core CSS -->
     <link href="css/style.css" rel="stylesheet">

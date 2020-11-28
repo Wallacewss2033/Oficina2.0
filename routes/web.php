@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BudgetsController;
 
-Route::get('/', [BudgetsController::class, 'index'])->name('budgets');
-Route::get('/budgets', [BudgetsController::class, 'index'])->name('budgets.index');
-Route::get('/search', [BudgetsController::class, 'search'])->name('budgets.search');
+Route::get('/budgets', [BudgetsController::class, 'index'])->name('budgets');
+//Route::get('/budgets', [BudgetsController::class, 'index'])->name('budgets.index');
+Route::post('/search', [BudgetsController::class, 'search'])->name('budgets.search');
 Route::get('/create', [BudgetsController::class, 'create'])->name('budgets.create');
 Route::post('/budgets', [BudgetsController::class, 'store'])->name('budgets.store');
 Route::get('/budgets/{id}/', [BudgetsController::class, 'show'])->name('budgets.show');

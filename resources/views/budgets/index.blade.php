@@ -50,7 +50,7 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                    @if(isset($budgets))
                     @foreach ($budgets as $budget )
                     <tr>
                         <th scope="row">{{$budget->id}}</th>
@@ -81,6 +81,11 @@
                         </td>
                     </tr>
                     @endforeach
+                    @else
+                    <tr>
+                        <td></td>
+                    </tr>
+                    @endif
                 </tbody>
             </table>
         </div>

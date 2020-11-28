@@ -8,7 +8,7 @@ use App\Models\Budgets;
 use GrahamCampbell\ResultType\Result;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Session;
 
 class BudgetsController extends Controller
 {
@@ -21,7 +21,7 @@ class BudgetsController extends Controller
 
     public function search(SearchFormRequest $request)
     {
-
+        
         $client = $request->cliente;
         $seller = $request->vendedor;
         $date_begin = $request->data_inicial;
@@ -32,9 +32,10 @@ class BudgetsController extends Controller
             ->orWhere('seller', '=', $seller)
             ->orderByDesc('date')
             ->get();
+        
 
         if (count($result) == 0) {
-            return redirect()->route('budgets.shearch')->with('error_search', 'Dados não encontrados!');
+            return redirect()->route('budgets')->with('error_search', 'Dados não encontrados!');
         } else {
             $budgets = $result->whereBetween('date', [$date_begin, $date_end]);;
 
@@ -90,6 +91,7 @@ class BudgetsController extends Controller
         $budgets = Budgets::where("id", $id)->first();
         $budgets->delete();
         
-        return back()->with('status', 'Orçamento excluído com sucesso!');
+        return redirect()->route('budgets.index')
+        ->with('status', 'Orçamento excluído com sucesso!');
     }
 }
