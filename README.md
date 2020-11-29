@@ -24,7 +24,7 @@ um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedid
 
 ## Status do projeto
 
-<h4 align="right"> 
+<h4 align="left"> 
 	Concluído✅
 </h4>
 
