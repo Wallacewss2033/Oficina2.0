@@ -44,11 +44,9 @@ class BudgetsController extends Controller
     }
 
 
-    public function create($id)
+    public function create()
     {
-        ]$budgets = Budgets::where("id", $id)->first();
-        return view('budgets.show', compact('budgets'));
-        //return view('budgets.create');
+        return view('budgets.create');
     }
 
 
