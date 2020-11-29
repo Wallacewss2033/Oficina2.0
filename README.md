@@ -1,7 +1,7 @@
 
 <h1 align="center">Oficina 2.0</h1>
 
-## Descrição do Projeto
+### Descrição do Projeto
 <p align="center">
 um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedidos de orçamento de uma oficina
 </p>
@@ -15,4 +15,24 @@ um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedid
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+
+## Frameworks, linguagens e Tecnologias usadas
+
+<p>LARAVEL 8X</p>
+<p>PHP</p>
+<p>Bootstrap 4.5</p>
+
+## Status do projeto
+
+<h4 align="center"> 
+	Concluído✅
+</h4>
+
+### Features
+
+- [x] Cadastro de orçamento
+- [x] Edição de orçamento
+- [x] visualização de orçamento
+- [x] Exclusão de orçamento
+- [x] paginação de orçamento
 
