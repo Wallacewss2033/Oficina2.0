@@ -1,10 +1,10 @@
 <?php
 
-//use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BudgetsController;
 
 
-Route::get('/create/{id}', [BudgetsController::class, 'create'])->name('budgets.create');
+Route::get('/create', [BudgetsController::class, 'create'])->name('budgets.create');
 Route::get('budgets/{id}', [BudgetsController::class, 'show'])->name('budgets.show');
 Route::post('/search', [BudgetsController::class, 'search'])->name('budgets.search');
 

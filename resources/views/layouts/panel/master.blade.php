@@ -10,6 +10,9 @@
 
     <title>Oficina 2.0</title>
 
+    <!-- reponsive Core CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+
     <!-- MyStyle Core CSS -->
     <link href="css/style.css" rel="stylesheet">
 

@@ -1,0 +1,43 @@
+@media(max-width: 700px) {
+    html, body {
+        zoom: 73%;
+    }
+    .panel {
+        width: 100vw;
+        width: 568px;
+    }
+    .wrapper {
+        max-width: 400px;
+        width: 90%;
+    }
+    .view-wrapper {
+        width: 100%;
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+    }
+    .table {
+        min-width: 350px;
+        width: 100px;
+    }
+    .content-form form {
+        font-size: 25px;
+    }
+    .content-form form input {
+        font-size: 30px;
+    }
+    .content-form form textarea {
+        font-size: 30px;
+        height: 250px;
+    }
+    .content-form form button {
+        font-size: 25px;
+    }
+    .container{
+        
+        margin: 20px;
+
+    }
+
+    .container select{
+        font-size: 30px;
+    }
+}
