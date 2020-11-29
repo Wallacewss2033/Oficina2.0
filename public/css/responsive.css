@@ -18,17 +18,17 @@
         min-width: 350px;
         width: 100px;
     }
-    .content-form form {
+    .description {
         font-size: 25px;
     }
-    .content-form form input {
+    .description input {
         font-size: 30px;
     }
-    .content-form form textarea {
+    .description textarea {
         font-size: 30px;
         height: 250px;
     }
-    .content-form form button {
+    .description button {
         font-size: 25px;
     }
     .container{
@@ -40,4 +40,13 @@
     .container select{
         font-size: 30px;
     }
+    .description {
+        font-size: 25px;
+    }
+    .description p {
+        font-size: 30px;
+    }
 }
+
+
+

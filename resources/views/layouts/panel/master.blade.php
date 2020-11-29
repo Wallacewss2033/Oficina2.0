@@ -11,19 +11,19 @@
     <title>Oficina 2.0</title>
 
     <!-- reponsive Core CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="{{URL::asset('css/responsive.css')}}" rel="stylesheet">
 
     <!-- MyStyle Core CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
 
     <!-- Style Global Core CSS -->
-    <link href="css/styleGlobal.css" rel="stylesheet">
+    <link href="{{URL::asset('css/styleGlobal.css') }}" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
-    <link href="site/bootstrap.css" rel="stylesheet">
+    <link href="{{URL::asset('site/bootstrap.css') }}" rel="stylesheet">
     
     <!-- icons google -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    <link href="{{URL::asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}"
       rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

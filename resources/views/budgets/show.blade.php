@@ -6,11 +6,11 @@
         <div class="teste">
             <div class="card">
                 <div class="card-header">
-                    <strong>Doação</strong>
+                    <strong>DETALHES ORÇAMENTO</strong>
                     <a href="{{ route('budgets') }}" class="btn btn-outline-info btn-sm float-right">Voltar</a>
                 </div>
 
-                <div class="card-body">
+                <div class="card-body description">
                     @if (session('status'))
                     <div class="alert alert-success">
                         {{ session('status') }}
