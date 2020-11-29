@@ -15,7 +15,7 @@ class BudgetsController extends Controller
 
     public function index(Request $request)
     {
-        $budgets = Budgets::orderByDesc('date')->get();       
+        $budgets = Budgets::orderByDesc('date')->paginate(8);       
         return view('budgets.index', compact('budgets'));
     }
 
@@ -44,9 +44,11 @@ class BudgetsController extends Controller
     }
 
 
-    public function create()
+    public function create($id)
     {
-        return view('budgets.create');
+        ]$budgets = Budgets::where("id", $id)->first();
+        return view('budgets.show', compact('budgets'));
+        //return view('budgets.create');
     }
 
 
@@ -67,7 +69,8 @@ class BudgetsController extends Controller
 
     public function show($id)
     {
-        //
+        $budgets = Budgets::where("id", $id)->first();
+        return view('budgets.show', compact('budgets'));
     }
 
     public function edit($id)
