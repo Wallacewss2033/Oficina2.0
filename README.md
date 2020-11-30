@@ -22,6 +22,7 @@ um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedid
 <p>PHP</p>
 <p>Bootstrap 4.5</p>
 <h4>personalização da Paginação - comando usado -> </h4> <p>php artisan vendor:publish --tag=laravel-pagination</p>
+<p>NPM</p>
 
 ## Status do projeto
 
