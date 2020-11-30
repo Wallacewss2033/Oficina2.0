@@ -39,5 +39,8 @@ um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedid
 - [x] paginação de orçamento
 
 ### Instruções para rodar 
-<h4>Uso do banco de dados: *mySQL*</h4>
+<h4>Uso do banco de dados: MySQL</h4>
+<h4>Criar um banco com nome "oficina" | DB_DATABASE=oficina</h4>
+<h4>depois execultar a migration, correndo o comando "php artisan migrate" </h4>
+
 
