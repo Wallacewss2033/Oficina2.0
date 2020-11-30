@@ -89,9 +89,13 @@ class BudgetsController extends Controller
 
     public function destroy($id)
     {
+        /*é recebido da rota um id, onde é buscado do model
+        um orçamento específico representado pelo id*/
+
         $budgets = Budgets::where("id", $id)->first();
+        /* linha de comando onde o orçamento instanciado é deletado*/
         $budgets->delete();
-        
+        /* depois de concluído, é redirecionado para a rota de nome "budgets"*/
         return redirect()->route('budgets')
         ->with('status', 'Orçamento excluído com sucesso!');
     }
