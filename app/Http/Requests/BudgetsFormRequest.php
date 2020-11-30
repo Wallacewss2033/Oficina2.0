@@ -26,7 +26,7 @@ class BudgetsFormRequest extends FormRequest
         return [
             'required' => 'Este campo é obrigatório.',
             'max' => 'Valor máximo de caracteres excedido.',
-            'numeric' => 'precisa ser apenas números',
+            'numeric' => 'precisa ser apenas números e use um ".(ponto)" entre as frações',
         ];
     }
 }

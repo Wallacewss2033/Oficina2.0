@@ -38,7 +38,11 @@ class BudgetsController extends Controller
             ->where('client', '=', $client)
             ->orWhere('seller', '=', $seller)
             ->orderByDesc('date')
-            ->get();
+            ->whereBetween('date', [$date_begin, $date_end])
+            ->paginate(8);
+
+            echo $result;
+            
         
         /*tendo o resultado, é feita uma condição, se a variável result estiver vazia, retornará uma sessison de erro,
         mas, senão pesquisá por data, as linhas de orçamento que ficam entre a data inicial e data final.*/
@@ -47,8 +51,10 @@ class BudgetsController extends Controller
             return redirect()->route('budgets')->with('error_search', 'Dados não encontrados!');
         } else {
 
-            $budgets = $result->whereBetween('date', [$date_begin, $date_end]);;
+           // $budgets = $result->whereBetween('date', [$date_begin, $date_end]);
+            $budgets = $result;
             return view('budgets.index', compact('budgets'));
+
         }
     }
 

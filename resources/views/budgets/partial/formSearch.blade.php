@@ -1,4 +1,4 @@
-<form method="POST" action="{{ url('/search') }}">
+<form method="POST" action="{{ route('budgets.search') }}">
     @csrf
     <div class="form-row font-size-search">
 

@@ -55,9 +55,9 @@
            <div class="form-group col-md-4">
                <label>Valor</label>
                @if(isset($budgets))
-               <input type="text" name="cost" class="form-control @error('cost') is-invalid @enderror" id="inputZip" placeholder="00,00" value="{{$budgets->cost}}">
+               <input type="text" name="cost" class="form-control @error('cost') is-invalid @enderror" id="inputZip" placeholder="00.00" value="{{$budgets->cost}}">
                @else
-               <input type="text" name="cost" class="form-control @error('cost') is-invalid @enderror" id="inputZip" placeholder="00,00">
+               <input type="text" name="cost" class="form-control @error('cost') is-invalid @enderror" id="inputZip" placeholder="00.00">
                @endif
 
                @error('cost')
