@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <strong>DETALHES ORÇAMENTO</strong>
-                    <a href="{{ route('budgets') }}" class="btn btn-outline-info btn-sm float-right">Voltar</a>
+                    <a href="{{ route('budgets') }}" class="btn btn-outline-primary btn-sm float-right">Voltar</a>
                 </div>
 
                 <div class="card-body description">
@@ -21,6 +21,7 @@
                     <p><strong>Vendedor: </strong>{{ $budgets->seller }}</p>
                     <p><strong>Data: </strong>{{ $budgets->date }}</p>
                     <p><strong>Horário: </strong>{{ $budgets->schedule }}</p>
+                    <p><strong>valor: </strong>R${{ $budgets->cost }}</p>
                     <p><strong>Descrição: </strong>{{ $budgets->description }}</p>
                 </div>
             </div>

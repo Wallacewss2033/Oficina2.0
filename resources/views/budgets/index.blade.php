@@ -58,7 +58,7 @@
                                 <th scope="row">{{$budget->id}}</th>
                                 <td>{{ $budget->client }}</td>
                                 <td>{{ $budget->seller }}</td>
-                                <td>{{ $budget->cost }}</td>
+                                <td>R${{ $budget->cost }}</td>
                                 <td>{{ $budget->date }}</td>
                                 <td>{{ $budget->schedule }}</td>
 
