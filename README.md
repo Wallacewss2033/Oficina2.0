@@ -37,3 +37,6 @@ um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedid
 - [x] Exclusão de orçamento
 - [x] paginação de orçamento
 
+### Instruções para rodar 
+<h4>Uso do banco de dados: *mySQL*</h4>
+
