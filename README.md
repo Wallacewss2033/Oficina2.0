@@ -21,6 +21,7 @@ um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedid
 <p>LARAVEL 8X</p>
 <p>PHP</p>
 <p>Bootstrap 4.5</p>
+<h4>personalização da Paginação - comando usado -> </h4> <p>php artisan vendor:publish --tag=laravel-pagination</p>
 
 ## Status do projeto
 
@@ -28,7 +29,7 @@ um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedid
 	Concluído✅
 </h4>
 
-### Features
+### Características
 
 - [x] Cadastro de orçamento
 - [x] Edição de orçamento
