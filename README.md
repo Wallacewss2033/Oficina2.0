@@ -21,6 +21,8 @@ um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedid
 <p>LARAVEL 8X</p>
 <p>PHP</p>
 <p>Bootstrap 4.5</p>
+<p>personalização da Paginação - comando usado -> php artisan vendor:publish --tag=laravel-pagination
+<p>NPM</p>
 
 ## Status do projeto
 
@@ -28,11 +30,18 @@ um sistema denominado Oficina 2.0, que visa facilitar o acompanhamento dos pedid
 	Concluído✅
 </h4>
 
-### Features
+### Características
 
 - [x] Cadastro de orçamento
 - [x] Edição de orçamento
 - [x] visualização de orçamento
 - [x] Exclusão de orçamento
 - [x] paginação de orçamento
+
+### Instruções para rodar 
+<h4>Instalar o laravel | link da documentação -> <link>https://laravel.com/</link></h4>
+<h4>Uso do banco de dados: MySQL</h4>
+<h4>Criar um banco com nome "oficina" | DB_DATABASE=oficina</h4>
+<h4>depois execultar a migration, correndo o comando "php artisan migrate" </h4>
+
 
