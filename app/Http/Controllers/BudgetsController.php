@@ -92,7 +92,7 @@ class BudgetsController extends Controller
         $budgets = Budgets::where("id", $id)->first();
         $budgets->delete();
         
-        return redirect()->route('budgets.index')
+        return redirect()->route('budgets')
         ->with('status', 'Orçamento excluído com sucesso!');
     }
 }

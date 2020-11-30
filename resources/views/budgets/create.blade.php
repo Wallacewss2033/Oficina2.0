@@ -8,7 +8,7 @@
             <strong>CRIAR ORÇAMENTO</strong>
             <a href="{{ route('budgets') }}" class="btn btn-outline-primary btn-sm float-right">Voltar</a>
         </div>
-        <div class="teste margin-top-dez">
+        <div class="margin-top-dez">
             <div class="content-form">
                 <form action="{{route('budgets.store')}}" method="POST">
                     @csrf
