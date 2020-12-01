@@ -1,7 +1,7 @@
-<!--@extends, chama o layout master-->
+<!--extends, chama o layout master-->
 @extends('layouts.panel.master')
 
-<!--@section, Seleciona o código para colocado em algum lugar no master-->
+<!--section, Seleciona o código para colocado em algum lugar no master-->
 @section('content')
 <div class="wrapper">
      <!--variável session, que vem do método store ou update-->

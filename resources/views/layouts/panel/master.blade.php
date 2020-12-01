@@ -40,7 +40,7 @@
         <nav class="nav bg-primary">
             <span class="navbar mb-0 h1 text-white">Oficina 2.0</span>
         </nav>
-        <!--é colocado os códigos selecionados pelo @section de cada página-->
+        <!--é colocado os códigos selecionados pelo section de cada página-->
         @yield('content')
     </div>
 

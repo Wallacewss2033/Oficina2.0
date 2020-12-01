@@ -1,7 +1,7 @@
-<!--@extends, chama o layout master-->
+<!--extends, chama o layout master-->
 @extends('layouts.panel.master')
 
-<!--@section, Seleciona o código para colocado em algum lugar no master-->
+<!--section, Seleciona o código para colocado em algum lugar no master-->
 @section('content')
 <div class="wrapper">
     <div class="view-wrapper margin-top-trinta">
@@ -14,7 +14,7 @@
             <div class="content-form">
                 <form action="{{ route('budgets.update', $budgets->id) }}" method="POST">
                     @csrf
-                    <!--@include, chama a view form para dentro deste código-->
+                    <!--include, chama a view form para dentro deste código-->
                     @include ('budgets.partial.form')
                     <button type="submit" class="btn btn-primary">atualizar orçamento</button>
                 </form>
