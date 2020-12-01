@@ -40,20 +40,21 @@
         <nav class="nav bg-primary">
             <span class="navbar mb-0 h1 text-white">Oficina 2.0</span>
         </nav>
+        <!--é colocado os códigos selecionados pelo @section de cada página-->
         @yield('content')
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
+    <script src="{{URL::asset('js/jquery.min.js')}}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="js/metisMenu.min.js"></script>
+    <script src="{{URL::asset('js/metisMenu.min.js')}}"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/startmin.js"></script>
+    <script src="{{URL::asset('js/startmin.js')}}"></script>
 
 </body>
 

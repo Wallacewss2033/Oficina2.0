@@ -2,6 +2,9 @@
 
            <div class="form-group col-md-6">
                <label>Cliente</label>
+               <!--Se tiver uma variável chamada "budgets" significa que haverá uma edição então os valores são colocados,
+               no input de edição, senão mostra apenas os inputs sem variáveis, indicando que haverá um cadastro.
+                OBS: Acontece com todos os inputs do form individualmente-->
                @if(isset($budgets))
                <input type="text" name="client" class="form-control @error('client') is-invalid @enderror" id="inputEmail4" placeholder="Nome completo" value="{{ $budgets->client }}">
                @else

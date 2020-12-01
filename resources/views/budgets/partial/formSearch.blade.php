@@ -1,3 +1,4 @@
+<!--Rota a qual vai ser enviada as variáveis através do request, usando o método post-->
 <form method="POST" action="{{ route('budgets.search') }}">
     @csrf
     <div class="form-row font-size-search">
@@ -5,7 +6,8 @@
         <div class="form-group col-md-2">
             <label>Data inicial</label>
             <input type="date" name="data_inicial" class="form-control @error('data_inicial') is-invalid @enderror" id="inputPassword4">
-
+            <!--Se tiver mensagem de erro do input, O FormRequest envia uma mensagem de erro
+            OBS: Acontece com todos os inputs do form individualmente-->
             @error('data_inicial')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror

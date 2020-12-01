@@ -1,7 +1,10 @@
+<!--@extends, chama o layout master-->
 @extends('layouts.panel.master')
 
+<!--@section, Seleciona o código para colocado em algum lugar no master-->
 @section('content')
 <div class="wrapper">
+     <!--variável session, que vem do método store ou update-->
     @if (session('status'))
     <div class="alert alert-success margin-top-dez" role="alert">
         {{ session('status') }}
@@ -11,6 +14,7 @@
     </div>
     @endif
 
+    <!--variável session de erro, que vem do método store ou update -->
     @if (session('error_search'))
     <div class="alert alert-danger margin-top-dez" role="alert">
         {{ session('error_search') }}
@@ -22,6 +26,7 @@
 
 
     <div class="container">
+        <!-- traz o formulário de pesquisa-->
         @include('budgets.partial.formSearch')
     </div>
     <div class="form-group col-md-12">
@@ -52,6 +57,8 @@
                             </tr>
                         </thead>
                         <tbody>
+                             <!-- Se existir a variável budgets, faça um foreach 
+                             para colocar cada variável em seu respectivo lugar-->
                             @if(isset($budgets))
                             @foreach ($budgets as $budget )
                             <tr>
@@ -61,7 +68,7 @@
                                 <td>R${{ $budget->cost }}</td>
                                 <td>{{ $budget->date }}</td>
                                 <td>{{ $budget->schedule }}</td>
-
+                                <!--botão que leva para rota de visualização com a variável específica do orçamento-->
                                 <td class="float-center">
                                     <a href="{{ route('budgets.show', $budget->id) }}" class="btn btn-outline-primary btn-sm">
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -70,6 +77,7 @@
                                         </svg>
                                     </a>
                                 </td>
+                                <!--botão que leva para rota de edição com a variável específica do orçamento-->
                                 <td class="float-center">
                                     <a href="{{ route('budgets.edit', $budget->id) }}" class="btn btn-outline-success btn-sm">
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -78,6 +86,7 @@
                                         </svg>
                                     </a>
                                 </td>
+                                <!--botão que leva para rota de exclusão com a variável específica do orçamento a ser excluído-->
                                 <td class="float-center">
                                     <Form action="{{ route('budgets.destroy', $budget->id) }}" method="POST">
                                         @method('DELETE')
@@ -90,7 +99,9 @@
                                     </Form>
                                 </td>
                             </tr>
+                            <!--Fim do foreach-->
                             @endforeach
+                            <!--senão, mostra a tabela vazia-->
                             @else
                             <tr>
                                 <td></td>
@@ -102,6 +113,8 @@
 
                     <div class="row">
                         <div class="col-12 text-center">
+                            <!--botões que mudam a página, caso exista muitos
+                             orçamentos que não caibam em apenas uma página -->
                             {{ $budgets->links("pagination::bootstrap-4") }}
                         </div>
                     </div>
