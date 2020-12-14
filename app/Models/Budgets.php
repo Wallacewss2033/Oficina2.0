@@ -23,6 +23,12 @@ class Budgets extends Model
         'schedule',
     ];
 
+     /**
+     * Pesquisa um recurso.
+     * @param  \Illuminate\Http\Request  $request
+     * @author método de pesquisar orçamentos
+     * @return \Illuminate\Http\Response
+     */
     public function search($client, $seller, $date_begin, $date_end)
     {
         /**
