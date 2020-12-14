@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 /**
  * Classe de Budgets
- * @author Classe de Orçamento
+ * @author Wallace
  */
 class Budgets extends Model
 {
@@ -23,31 +23,27 @@ class Budgets extends Model
         'schedule',
     ];
 
-     /**
+    /**
      * Pesquisa um recurso.
      * @param  \Illuminate\Http\Request  $request
-     * @author método de pesquisar orçamentos
      * @return \Illuminate\Http\Response
+     * 
+     * @param [string] $client [nome do cliente]
+     * @param [string] $seller [nome do vendedor]
+     * @param [date] $date_begin [data inicial]
+     * @param [date] $date_end [data final]
+     * 
+     *  @return [array] $result
      */
     public function search($client, $seller, $date_begin, $date_end)
     {
-        /**
-         * aqui são pegas variáveis para realizar a pesquisa no banco
-         * @param $client
-         * @param $seller
-         * @param $date_begin
-         * @param $date_end
-         * retornarem para a variável @param $result
-         */
         $result = DB::table('budgets')
             ->where('client', '=', $client)
             ->orWhere('seller', '=', $seller)
             ->orderByDesc('date')
             ->whereBetween('date', [$date_begin, $date_end])
             ->paginate(8);
-        /**
-         * @return $result
-         */
+
         return $result;
     }
 }
