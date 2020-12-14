@@ -68,6 +68,7 @@
                                 <td>R${{ $budget->cost }}</td>
                                 <td>{{ $budget->date }}</td>
                                 <td>{{ $budget->schedule }}</td>
+                                
                                 <!--botão que leva para rota de visualização com a variável específica do orçamento-->
                                 <td class="float-center">
                                     <a href="{{ route('budgets.show', $budget->id) }}" class="btn btn-outline-primary btn-sm">
@@ -77,6 +78,7 @@
                                         </svg>
                                     </a>
                                 </td>
+                                
                                 <!--botão que leva para rota de edição com a variável específica do orçamento-->
                                 <td class="float-center">
                                     <a href="{{ route('budgets.edit', $budget->id) }}" class="btn btn-outline-success btn-sm">
