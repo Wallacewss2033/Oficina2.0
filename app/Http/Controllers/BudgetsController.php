@@ -31,12 +31,6 @@ class BudgetsController extends Controller
      */
     public function search(SearchFormRequest $request)
     {
-        /**
-         * @param [string] $client [nome do cliente]
-         * @param [string] $seller [nome do vendedor]
-         * @param [date] $date_begin [data inicial]
-         * @param [date] $date_end [data final]
-         */
         $client = $request->cliente;
         $seller = $request->vendedor;
         $date_begin = $request->data_inicial;
@@ -46,12 +40,7 @@ class BudgetsController extends Controller
 
         $result = $budgets->search($client, $seller, $date_begin, $date_end);
 
-        /**
-         * tendo o resultado, é feita uma condição, se a variável $result estiver vazia, retornará uma sessison de erro,
-         * 
-         * mas, senão entrega o valor de $result à $budgets 
-         * e enviada para a view budgets.index
-         */
+       
 
         if (count($result) == 0) {
             return redirect()->route('budgets')->with('error_search', 'Dados não encontrados!');
@@ -126,11 +115,6 @@ class BudgetsController extends Controller
      */
     public function edit($id)
     {
-        /**
-         * é recebido da rota um id, onde é buscado do model
-         * um orçamento específico representado pelo id
-         * @param int $id
-         */
         $budgets = Budgets::where("id", $id)->first();
         return view('budgets.edit', compact('budgets'));
     }
@@ -166,7 +150,7 @@ class BudgetsController extends Controller
        
         $budgets = Budgets::where("id", $id)->first();
         $budgets->delete();
-        
+
         return redirect()->route('budgets')
             ->with('status', 'Orçamento excluído com sucesso!');
     }
